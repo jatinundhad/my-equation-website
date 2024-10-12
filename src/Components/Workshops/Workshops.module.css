@@ -1,0 +1,14 @@
+ .carousel-wrapper{
+  background-color: bisque;
+  height: 90vh;
+  margin:auto;
+}
+
+.carousel{
+  max-width: 85%;
+  margin: auto;
+}
+
+.card{
+  max-width: 60rem;
+}
