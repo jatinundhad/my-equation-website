@@ -3,13 +3,18 @@ import TypingEffect from "./TypingEffect";
 import { Login } from "../Navbar/Login";
 import { GridBackground } from "./GridBackground";
 import Waves from "./Waves";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <>
       <GridBackground>
         <div className="hero text-3xl w-full h-screen max-h-[708px] flex justify-between px-16">
-          <section className="mt-20 ml-16 text-[1.7em] font-semibold leading-[70px]">
+          <motion.section
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: -100, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mt-20 ml-16 text-[1.7em] font-semibold leading-[70px]">
             <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
               <span className="whitespace-nowrap mr-4">Find Your Own</span>
               <span className="whitespace-nowrap">
@@ -45,8 +50,12 @@ const Hero = () => {
             </div>
 
             <Login></Login>
-          </section>
-          <section className="hero-img h-full max-h-[450px] mt-8 mr-16">
+          </motion.section>
+          <motion.section
+            whileInView={{ opacity: 1, x: 0.2 }}
+            initial={{ x: 100, opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="hero-img h-full max-h-[450px] mt-8 mr-16">
             <dotlottie-player
               src="https://lottie.host/baf696a9-3865-4e2c-9171-1edb1a8275d8/4OKDqqsSkb.json"
               background="transparent"
@@ -54,7 +63,7 @@ const Hero = () => {
               loop
               autoplay
             ></dotlottie-player>
-          </section>
+          </motion.section>
         </div>
       </GridBackground>
       <Waves />

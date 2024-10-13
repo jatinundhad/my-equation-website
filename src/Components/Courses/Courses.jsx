@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Courses.module.css"
+import { motion } from "framer-motion";
 
 const coursesData = [
   {
@@ -26,10 +27,14 @@ function Courses() {
 
   return (
     <div className="courses-container-wrapper">
-      <h1 className={styles["heading"]}>Our Courses</h1>
+      <motion.h1 whileInView={{ opacity: 1, y: 0 }}
+        initial={{ y: -100, opacity: 0 }}
+        transition={{ duration: 0.5 }} className={styles["heading"]}>Our Courses</motion.h1>
       <div className={styles["courses-container"]}>
         {coursesData.map((course, index) => (
-          <div key={index} className={styles["course-container"]}>
+          <motion.div whileInView={{ opacity: 1, x: 0 }}
+            initial={{ x: -100, opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }} key={index} className={styles["course-container"]}>
             <div className={styles["go-corner"]} href="#">
               <div className={styles["go-arrow"]}>→</div>
             </div>
@@ -40,10 +45,12 @@ function Courses() {
             ></img>
             <h5 className={styles["course-title"]}>{course.title}</h5>
             <p className={styles["course-description"]}>{course.description}</p>
-          </div>
+          </motion.div>
         ))}
-        </div>
-        <button className={styles["view-all-btn"]}><a href="{{}}">View More</a></button>
+      </div>
+      <motion.button whileInView={{ opacity: 1, x: 0 }}
+        initial={{ x: -100, opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }} className={styles["view-all-btn"]}><a href="{{}}">View More</a></motion.button>
     </div>
   );
 }

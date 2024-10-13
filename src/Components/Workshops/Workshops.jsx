@@ -5,6 +5,8 @@ import {
 import WorkshopCard from "./WorkshopCard";
 import { useEffect, useState } from 'react';
 import WorkshopCardMobile from "./WorkshopCardMobile";
+import { motion } from "framer-motion";
+
 
 function debounce(func, timeout = 300) {
   let timer;
@@ -38,7 +40,7 @@ function Workshops() {
       setShowArrowNavigation(true);
     }
   }, [windowWidth]);
-  
+
 
   const handleMouseEnter = () => {
     setPaused(true);
@@ -49,8 +51,10 @@ function Workshops() {
   };
 
   return (
-    <div className="h-fit bg-[#ec489a49]">
-      <Carousel transition={{ duration: 1 }} className="rounded-xl w-[100%] sm:w-[85%] mx-auto" 
+    <motion.div whileInView={{ opacity: 1, x: 0 }}
+      initial={{ x: -100, opacity: 0 }}
+      transition={{ duration: 0.5, delay: 0.3 }} className="h-fit bg-[#ec489a49]">
+      <Carousel transition={{ duration: 1 }} className="rounded-xl w-[100%] sm:w-[85%] mx-auto"
         prevArrow={({ handlePrev }) => (
           <IconButton
             variant="text"
@@ -73,7 +77,7 @@ function Workshops() {
                 d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
               />
             </svg>
-          </IconButton> 
+          </IconButton>
         )}
         nextArrow={({ handleNext }) => (
           <IconButton
@@ -97,7 +101,7 @@ function Workshops() {
                 d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
               />
             </svg>
-          </IconButton> 
+          </IconButton>
         )}
 
         navigation={({ setActiveIndex, activeIndex, length }) => (
@@ -119,12 +123,12 @@ function Workshops() {
         onMouseLeave={handleMouseLeave}
       >
 
-        {showArrowNavigation ?  <WorkshopCard />: <WorkshopCardMobile/>}
-        {showArrowNavigation ?  <WorkshopCard />: <WorkshopCardMobile/>}
-        {showArrowNavigation ?  <WorkshopCard />: <WorkshopCardMobile/>}
+        {showArrowNavigation ? <WorkshopCard /> : <WorkshopCardMobile />}
+        {showArrowNavigation ? <WorkshopCard /> : <WorkshopCardMobile />}
+        {showArrowNavigation ? <WorkshopCard /> : <WorkshopCardMobile />}
       </Carousel>
-    </div>
+    </motion.div>
   );
 }
 
-export default Workshops;
+export default Workshops; 
