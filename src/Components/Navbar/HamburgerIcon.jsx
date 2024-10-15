@@ -1,9 +1,6 @@
 export const HamburgerIcon = ({ isOpen, setIsOpen }) => {
   return (
-    <button
-      onClick={() => setIsOpen(!isOpen)}
-      className="sm:hidden focus:outline-none mx-3"
-    >
+    <button onClick={() => setIsOpen(!isOpen)} className="sm:hidden focus:outline-none mx-3">
       {/* Hamburger icon */}
       <svg
         className="w-6 h-6"

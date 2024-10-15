@@ -1,9 +1,11 @@
-import styles from "./Waves.module.css";
+import styles from './Waves.module.css';
 
 const Waves = () => {
   return (
-    <div><div class={styles["waves"]}></div></div>
-  )
-}
+    <div>
+      <div class={styles['waves']}></div>
+    </div>
+  );
+};
 
-export default Waves
+export default Waves;

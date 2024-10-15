@@ -1,34 +1,25 @@
-import { Button } from "@mui/material";
+import { Button } from '@mui/material';
 
 export const CollapsibleMenu = ({ isOpen }) => {
   return (
     <section
       className={`${
-        isOpen ? "block" : "hidden"
+        isOpen ? 'block' : 'hidden'
       } sm:hidden py-2 h-fit flex justify-center rounded-xl z-30 bg-slate-100`}
     >
       <ul className="text-center w-full grid grid-cols-1 divide-y">
         <li className="py-2 font-medium">
-          <a
-            href="#home"
-            className="hover:text-slate-900/100 text-indigo-900/75 font-bold"
-          >
+          <a href="#home" className="hover:text-slate-900/100 text-indigo-900/75 font-bold">
             Home
           </a>
         </li>
         <li className="py-2 font-medium">
-          <a
-            href="#about"
-            className="hover:text-slate-900/100 text-indigo-900/75 font-bold"
-          >
+          <a href="#about" className="hover:text-slate-900/100 text-indigo-900/75 font-bold">
             About
           </a>
         </li>
         <li className="py-2 font-medium">
-          <a
-            href="#contact"
-            className="hover:text-slate-900/100 text-indigo-900/75 font-bold"
-          >
+          <a href="#contact" className="hover:text-slate-900/100 text-indigo-900/75 font-bold">
             Contact
           </a>
         </li>

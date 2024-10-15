@@ -9,7 +9,7 @@
 }
 
 .blinking-cursor::after {
-  content: "|";
+  content: '|';
   animation-name: blinking;
   animation-duration: 0.71s;
   animation-iteration-count: infinite;

@@ -14,7 +14,7 @@
 
 /* Fade in */
 .heading::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 42.5%;
@@ -22,7 +22,9 @@
   height: 0.1em;
   background-color: black;
   opacity: 0;
-  transition: opacity 300ms, transform 300ms;
+  transition:
+    opacity 300ms,
+    transform 300ms;
 }
 
 .heading:hover::after,
@@ -44,7 +46,7 @@
 
 .sponsor-box {
   margin: 50px;
-  display: "inline-block";
+  display: 'inline-block';
 }
 .sponsor-image {
   width: 100px;
@@ -53,7 +55,7 @@
 @media only screen and (max-width: 768px) {
   .sponsor-box {
     margin: 25px;
-    display: "inline-block";
+    display: 'inline-block';
   }
   .sponsor-image {
     width: 70px;

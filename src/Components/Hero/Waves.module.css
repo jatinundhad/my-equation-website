@@ -10,7 +10,7 @@
 
 .waves::before,
 .waves::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 300vw;
   height: 300vw;
