@@ -53,7 +53,7 @@ function Workshops() {
         prevArrow={({ handlePrev }) => (
           <IconButton
             variant="text"
-            color="#4e46e5"
+            color="white"
             size="lg"
             onClick={handlePrev}
             className="!absolute top-2/4 left-4 -translate-y-2/4"
@@ -77,7 +77,7 @@ function Workshops() {
         nextArrow={({ handleNext }) => (
           <IconButton
             variant="text"
-            color="#4e46e5"
+            color="white"
             size="lg"
             onClick={handleNext}
             className="!absolute top-2/4 !right-4 -translate-y-2/4"
@@ -99,7 +99,7 @@ function Workshops() {
           </IconButton>
         )}
         navigation={({ setActiveIndex, activeIndex, length }) => (
-          <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+          <div className="absolute bottom-4 left-2/4 z-0 flex -translate-x-2/4 gap-2">
             {new Array(length).fill('').map((_, i) => (
               <span
                 key={i}

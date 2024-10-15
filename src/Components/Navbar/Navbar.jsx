@@ -24,7 +24,7 @@ export const Navbar = () => {
     <motion.nav
       className={`z-50 w-full sticky h-[60px] ${
         changeNavbarBackground
-          ? 'backdrop-blur-sm bg-white/30 top-0 border-b-[1px] border-slate-100'
+          ? 'bg-white/100 sm:backdrop-blur-sm sm:bg-white/30 top-0 border-b-[1px] border-slate-100'
           : 'bg-transparent'
       }`}
       layout
