@@ -1,7 +1,8 @@
-import Carousel from "react-spring-3d-carousel";
-import { useState, useEffect } from "react";
-import { config } from "react-spring";
-import styles from "./Testimonial.module.css";
+import Carousel from 'react-spring-3d-carousel';
+import { React, useState, useEffect } from 'react';
+import { config } from 'react-spring';
+import styles from './Testimonial.module.css';
+import PropTypes from 'prop-types';
 
 export default function Testimonial(props) {
   const table = props.cards.map((element, index) => {
@@ -36,10 +37,8 @@ export default function Testimonial(props) {
   };
 
   return (
-    <div className={styles["carousel-container"]}>
-      <div
-        style={{ width: props.width, height: props.height, margin: props.margin }}
-      >
+    <div className={styles['carousel-container']}>
+      <div style={{ width: props.width, height: props.height, margin: props.margin }}>
         <Carousel
           slides={cards}
           goToSlide={goToSlide}
@@ -47,7 +46,7 @@ export default function Testimonial(props) {
           animationConfig={config.gentle}
         />
       </div>
-      <div className={styles["dots-container"]}>
+      <div className={styles['dots-container']}>
         {cards.map((_, index) => (
           <span
             key={index}
@@ -59,7 +58,7 @@ export default function Testimonial(props) {
               margin: '0 5px',
               backgroundColor: currentSlide === index ? '#333' : '#bbb',
               borderRadius: '50%',
-              display: 'inline-block',
+              display: 'inline-block'
             }}
           />
         ))}
@@ -67,3 +66,13 @@ export default function Testimonial(props) {
     </div>
   );
 }
+
+Testimonial.propTypes = {
+  cards: PropTypes.array,
+  autoPlayInterval: PropTypes.number,
+  offset: PropTypes.number,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  margin: PropTypes.string,
+  showArrows: PropTypes.bool
+};

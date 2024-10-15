@@ -5,11 +5,12 @@
   right: 0;
   height: 200px;
   transition: 500ms;
+  z-index: -1;
 }
 
 .waves::before,
 .waves::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 300vw;
   height: 300vw;
