@@ -1,6 +1,7 @@
 import styles from './Card.module.css';
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
+import PropTypes from 'prop-types';
 
 function Card({ data }) {
   const [show, setShown] = useState(false);
@@ -27,3 +28,7 @@ function Card({ data }) {
 }
 
 export default Card;
+
+Card.propTypes = {
+  data: PropTypes.object
+};

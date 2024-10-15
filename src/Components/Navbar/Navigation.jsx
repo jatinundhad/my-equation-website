@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const Navigation = () => {
   return (
     <div className="sm:block hidden sm:w-1/3 w-1/2 place-content-center">

@@ -1,4 +1,5 @@
-import { Button } from '@mui/material';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export const CollapsibleMenu = ({ isOpen }) => {
   return (
@@ -26,4 +27,8 @@ export const CollapsibleMenu = ({ isOpen }) => {
       </ul>
     </section>
   );
+};
+
+CollapsibleMenu.propTypes = {
+  isOpen: PropTypes.bool.isRequired
 };

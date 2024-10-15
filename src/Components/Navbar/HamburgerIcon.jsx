@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 export const HamburgerIcon = ({ isOpen, setIsOpen }) => {
   return (
     <button onClick={() => setIsOpen(!isOpen)} className="sm:hidden focus:outline-none mx-3">
@@ -18,4 +21,9 @@ export const HamburgerIcon = ({ isOpen, setIsOpen }) => {
       </svg>
     </button>
   );
+};
+
+HamburgerIcon.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  setIsOpen: PropTypes.func.isRequired
 };

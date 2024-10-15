@@ -1,7 +1,8 @@
 import Carousel from 'react-spring-3d-carousel';
-import { useState, useEffect } from 'react';
+import { React, useState, useEffect } from 'react';
 import { config } from 'react-spring';
 import styles from './Testimonial.module.css';
+import PropTypes from 'prop-types';
 
 export default function Testimonial(props) {
   const table = props.cards.map((element, index) => {
@@ -65,3 +66,13 @@ export default function Testimonial(props) {
     </div>
   );
 }
+
+Testimonial.propTypes = {
+  cards: PropTypes.array,
+  autoPlayInterval: PropTypes.number,
+  offset: PropTypes.number,
+  width: PropTypes.string,
+  height: PropTypes.string,
+  margin: PropTypes.string,
+  showArrows: PropTypes.bool
+};

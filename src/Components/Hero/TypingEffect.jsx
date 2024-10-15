@@ -1,3 +1,4 @@
+import React from 'react';
 import Typewriter from 'typewriter-effect';
 import style from './TypingEffect.module.css';
 
