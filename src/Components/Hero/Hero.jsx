@@ -1,13 +1,11 @@
 import React from "react";
 import TypingEffect from "./TypingEffect";
 import { Login } from "../Navbar/Login";
-import { GridBackground } from "./GridBackground";
 import Waves from "./Waves";
 
 const Hero = () => {
   return (
     <>
-      <GridBackground>
         <div className="hero text-3xl w-full h-screen max-h-[708px] flex justify-between px-16">
           <section className="mt-20 ml-16 text-[1.7em] font-semibold leading-[70px]">
             <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
@@ -56,7 +54,6 @@ const Hero = () => {
             ></dotlottie-player>
           </section>
         </div>
-      </GridBackground>
       <Waves />
     </>
   );

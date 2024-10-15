@@ -7,30 +7,22 @@ import { HamburgerIcon } from "./HamburgerIcon";
 import { CollapsibleMenu } from "./CollapsibleMenu";
 
 export const Navbar = () => {
-  const [showAnimation, setShowAnimation] = useState(false);
+  const [changeNavbarBackground, setChangeNavbarBackground] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
   const { scrollY } = useScroll();
-  const animationStyle = {
-    width: "80%",
-    borderRadius: "100px",
-    translateY: "15px",
-    margin: "0 auto 0 auto",
-  };
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest >= 80) {
-      setShowAnimation(true);
+    if (latest >= 0.1) {
+      setChangeNavbarBackground(true);
     } else {
-      setShowAnimation(false);
+      setChangeNavbarBackground(false);
     }
   });
 
   return (
     <motion.nav
-      // animate={showAnimation ? animationStyle : {}}
-      // transition={{ type: "spring", bounce: 0, duration: 0.1, stiffness: 80 }}
-      className="z-50 w-full sticky h-[60px] backdrop-blur-sm bg-white/30 top-0 border-b-[1px] border-slate-100"
+      className={`z-50 w-full sticky h-[60px] ${changeNavbarBackground ? "backdrop-blur-sm bg-white/30 top-0 border-b-[1px] border-slate-100": "bg-transparent"}`}
       layout
     >
       <section className="min-w-screen-lg h-full flex justify-between px-4 sm:justify-around sm:px-0">
