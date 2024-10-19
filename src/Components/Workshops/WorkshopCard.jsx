@@ -24,7 +24,7 @@ function WorkshopCard() {
           recently a traditional boxed software company selling licenses. Yet its own business model
           disruption is only part of the story
         </Typography>
-        <a href="#" className="inline-block">
+        <a href="/#" className="inline-block">
           <Button variant="text" className="flex items-center gap-2">
             Learn More
             <svg
