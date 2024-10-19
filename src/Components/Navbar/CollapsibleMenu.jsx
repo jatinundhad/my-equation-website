@@ -12,20 +12,25 @@ export const CollapsibleMenu = ({ isOpen }) => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -10, opacity: 0 }}
           transition={{ duration: 0.3, ease: 'easeInOut' }}
-          className="sm:hidden py-2 h-fit flex justify-center rounded-b-xl border-b-[1px] border-slate-100 bg-white"
+          className="sm:hidden h-fit flex justify-center border-[1px] border-slate-100 bg-white shadow-md"
         >
-          <ul className="text-center w-full grid grid-cols-1 divide-y">
-            <li className="py-2 font-medium">
+          <ul className="py-1 w-full grid grid-cols-1">
+            <li className="ml-9 py-2 font-medium">
+              <i className="fa-solid fa-arrow-right mr-3"></i>
               <a href="#home" className="hover:text-slate-900/100 text-indigo-900/75 font-bold">
                 Home
               </a>
             </li>
-            <li className="py-2 font-medium">
+            <li className="ml-9 py-2 font-medium">
+              <i className="fa-solid fa-arrow-right mr-3"></i>
+
               <a href="#about" className="hover:text-slate-900/100 text-indigo-900/75 font-bold">
                 About
               </a>
             </li>
-            <li className="py-2 font-medium">
+            <li className="ml-9 py-2 font-medium">
+              <i className="fa-solid fa-arrow-right mr-3"></i>
+
               <a href="#contact" className="hover:text-slate-900/100 text-indigo-900/75 font-bold">
                 Contact
               </a>
