@@ -42,9 +42,10 @@ const Hero = () => {
         </section>
         <section className="hero-img h-full max-h-[450px] mt-8">
           <dotlottie-player
-            src="https://lottie.host/baf696a9-3865-4e2c-9171-1edb1a8275d8/4OKDqqsSkb.json"
+            src="https://lottie.host/7a86c80e-8f2b-419c-948f-f0c4d43c4776/xXUZTECrHj.json"
             background="transparent"
             speed="1"
+            style={{ width: '450px', height: '450px' }}
             loop
             autoplay
           ></dotlottie-player>
