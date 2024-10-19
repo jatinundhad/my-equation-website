@@ -1,7 +1,7 @@
 import React from 'react';
 import TypingEffect from './TypingEffect';
-import { Login } from '../Navbar/Login';
 import Waves from './Waves';
+import EnrollNowButton from './EnrollNowButton';
 
 const Hero = () => {
   return (
@@ -38,7 +38,7 @@ const Hero = () => {
             </p>
           </div>
 
-          <Login></Login>
+          <EnrollNowButton />
         </section>
         <section className="hero-img h-full max-h-[450px] mt-8">
           <dotlottie-player
