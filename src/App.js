@@ -6,6 +6,7 @@ import Sponsors from './Components/Partners/Partners';
 import Workshops from './Components/Workshops/Workshops';
 import Footer from './Components/Footer/Footer';
 import Hero from './Components/Hero/Hero';
+import Scroll from './Components/ScrollToTop/Scroll';
 // import Testimonial from "./Components/Testimonial/Testimonial";
 // import testimonialsData from "./Components/Testimonial/testimonialsData";
 // import Card from "./Components/Testimonial/Card";
@@ -30,6 +31,7 @@ function App() {
       {/* <Testimonial cards={testimonialsData} /> */}
 
       <Footer />
+      <Scroll/>
     </div>
   );
 }
