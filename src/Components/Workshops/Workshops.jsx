@@ -1,8 +1,13 @@
-import React from 'react';
-import { Carousel, IconButton } from '@material-tailwind/react';
-import WorkshopCard from './WorkshopCard';
+import {
+  Carousel,
+  IconButton,
+} from "@material-tailwind/react";
+import WorkshopCard from "./WorkshopCard";
 import { useEffect, useState } from 'react';
-import WorkshopCardMobile from './WorkshopCardMobile';
+import WorkshopCardMobile from "./WorkshopCardMobile";
+import { motion } from "framer-motion";
+import styles from "./Workshops.module.css"
+
 
 function debounce(func, timeout = 300) {
   let timer;
@@ -37,6 +42,7 @@ function Workshops() {
     }
   }, [windowWidth]);
 
+
   const handleMouseEnter = () => {
     setPaused(true);
   };
@@ -46,24 +52,25 @@ function Workshops() {
   };
 
   return (
-    <section className=" h-full ">
-      <div className="bg-[url('/src/assets/curve-bg.svg')]  bg-no-repeat bg-contain py-[60px]">
-        {' '}
-        {/* Background color applied */}
-        <Carousel
-          transition={{ duration: 1 }}
-          className="rounded-xl w-[100%] sm:w-[85%] mx-auto"
+    <section className={`my-12 ${styles["section-style"]}`}>
+      <motion.h1 whileInView={{ opacity: 1, y: 0 }}
+        initial={{ y: -100, opacity: 0 }}
+        transition={{ duration: 0.5 }} className={`${styles["heading"]} font-headingFont`}>Upcoming Workshops</motion.h1>
+      <motion.div whileInView={{ opacity: 1, x: 0 }}
+        initial={{ x: -100, opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }} className="h-fit">
+        <Carousel transition={{ duration: 1 }} className="rounded-xl w-[100%] sm:w-[85%] mx-auto"
           prevArrow={({ handlePrev }) => (
             <IconButton
               variant="text"
-              color="white"
+              color="#4e46e5"
               size="lg"
               onClick={handlePrev}
               className="!absolute top-2/4 left-4 -translate-y-2/4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
+                fill="#4e46e5"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="#4e46e5"
@@ -80,14 +87,14 @@ function Workshops() {
           nextArrow={({ handleNext }) => (
             <IconButton
               variant="text"
-              color="white"
+              color="#4e46e5"
               size="lg"
               onClick={handleNext}
               className="!absolute top-2/4 !right-4 -translate-y-2/4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                fill="none"
+                fill="#4e46e5"
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="#4e46e5"
@@ -101,14 +108,14 @@ function Workshops() {
               </svg>
             </IconButton>
           )}
+
           navigation={({ setActiveIndex, activeIndex, length }) => (
-            <div className="absolute bottom-4 left-2/4 z-0 flex -translate-x-2/4 gap-2">
-              {new Array(length).fill('').map((_, i) => (
+            <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+              {new Array(length).fill("").map((_, i) => (
                 <span
                   key={i}
-                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                    activeIndex === i ? 'w-8 bg-primary-default' : 'w-4 bg-neutral-light'
-                  }`}
+                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${activeIndex === i ? "w-8 bg-[#4e46e5]" : "w-4 bg-white/50"
+                    }`}
                   onClick={() => setActiveIndex(i)}
                 />
               ))}
@@ -120,13 +127,14 @@ function Workshops() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
+
           {showArrowNavigation ? <WorkshopCard /> : <WorkshopCardMobile />}
           {showArrowNavigation ? <WorkshopCard /> : <WorkshopCardMobile />}
           {showArrowNavigation ? <WorkshopCard /> : <WorkshopCardMobile />}
         </Carousel>
-      </div>
+      </motion.div>
     </section>
   );
 }
 
-export default Workshops;
+export default Workshops; 
