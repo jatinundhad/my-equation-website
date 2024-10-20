@@ -1,5 +1,6 @@
 import withMT from '@material-tailwind/react/utils/withMT';
 import plugin from 'tailwindcss/plugin';
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 export default withMT({
@@ -19,7 +20,7 @@ export default withMT({
         },
         secondary: {
           light: '#ffd966', // lighter yellow for dark mode
-          default: '#FFC632', // main yellow
+          default: 'rgba(237, 214, 110, 0.2)', // main yellow
           dark: '#b38924' // darker yellow for light mode
         },
         neutral: {
@@ -31,6 +32,12 @@ export default withMT({
           light: '#ffffff', // white font for dark backgrounds (dark mode)
           default: '#e6eeff'
         }
+      },
+      fontFamily: {
+        headingFont: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
+        subHeadingFont: ['"Poppins"', ...defaultTheme.fontFamily.sans],
+        bodyFont: ['"Roboto"', ...defaultTheme.fontFamily.sans],
+        infoFont: ['"Open Sans"', ...defaultTheme.fontFamily.sans]
       }
     },
     screens: {

@@ -20,11 +20,12 @@ function WorkshopCardMobile() {
         </CardHeader>
         <CardBody>
           <Typography variant="h5" color="blue-gray" className="mb-2">
-            UI/UX Review Check
+            RoboKit
           </Typography>
           <Typography>
-            The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to
-            &quot;Naviglio&quot; where you can enjoy the main night life in Barcelona.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, a? Esse corrupti sit qui
+            ipsam eligendi quo perferendis iusto ut, necessitatibus laborum vel maiores excepturi
+            voluptatem voluptate ipsa optio dolorem?
           </Typography>
         </CardBody>
         <CardFooter className="pt-0">

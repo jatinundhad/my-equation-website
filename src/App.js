@@ -9,14 +9,11 @@ import Hero from './Components/Hero/Hero';
 import Testimonial from './Components/Testimonial/Testimonial';
 import testimonials from './Components/Testimonial/testimonialsData';
 import Scroll from './Components/ScrollToTop/Scroll';
-<<<<<<< Updated upstream
-=======
 import Query from './Components/Query/Query';
 
 // import Testimonial from "./Components/Testimonial/Testimonial";
 // import testimonialsData from "./Components/Testimonial/testimonialsData";
 // import Card from "./Components/Testimonial/Card";
->>>>>>> Stashed changes
 
 function App() {
   return (
@@ -28,12 +25,14 @@ function App() {
       <Hero />
 
       {/* jainish */}
-      <Courses />
       <Sponsors />
-      <Query/>
-      {/* krishil */}
-      <Workshops />
 
+      <section className="section-style">
+        <Courses />
+        {/* krishil */}
+        <Workshops />
+      </section>
+      <Query/>
       {/* smit */}
       <Testimonial cards={testimonials} height="500px" width="70%" offset={2} showArrows={false} />
 
