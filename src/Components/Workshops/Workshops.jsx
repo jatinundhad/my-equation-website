@@ -1,13 +1,9 @@
-import {
-  Carousel,
-  IconButton,
-} from "@material-tailwind/react";
-import WorkshopCard from "./WorkshopCard";
+import { Carousel, IconButton } from '@material-tailwind/react';
+import WorkshopCard from './WorkshopCard';
 import { useEffect, useState } from 'react';
-import WorkshopCardMobile from "./WorkshopCardMobile";
-import { motion } from "framer-motion";
-import styles from "./Workshops.module.css"
-
+import WorkshopCardMobile from './WorkshopCardMobile';
+import { motion } from 'framer-motion';
+import styles from './Workshops.module.css';
 
 function debounce(func, timeout = 300) {
   let timer;
@@ -42,7 +38,6 @@ function Workshops() {
     }
   }, [windowWidth]);
 
-
   const handleMouseEnter = () => {
     setPaused(true);
   };
@@ -53,13 +48,23 @@ function Workshops() {
 
   return (
     <section className={`my-12`}>
-      <motion.h1 whileInView={{ opacity: 1, y: 0 }}
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: -100, opacity: 0 }}
-        transition={{ duration: 0.5 }} className={`${styles["heading"]} font-headingFont`}>Upcoming Workshops</motion.h1>
-      <motion.div whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5 }}
+        className={`${styles['heading']} font-headingFont`}
+      >
+        Upcoming Workshops
+      </motion.h1>
+      <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
         initial={{ x: -100, opacity: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }} className="h-fit">
-        <Carousel transition={{ duration: 1 }} className="rounded-xl w-[100%] sm:w-[85%] mx-auto"
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="h-fit"
+      >
+        <Carousel
+          transition={{ duration: 1 }}
+          className="rounded-xl w-[100%] sm:w-[85%] mx-auto"
           prevArrow={({ handlePrev }) => (
             <IconButton
               variant="text"
@@ -108,14 +113,14 @@ function Workshops() {
               </svg>
             </IconButton>
           )}
-
           navigation={({ setActiveIndex, activeIndex, length }) => (
             <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
-              {new Array(length).fill("").map((_, i) => (
+              {new Array(length).fill('').map((_, i) => (
                 <span
                   key={i}
-                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${activeIndex === i ? "w-8 bg-[#4e46e5]" : "w-4 bg-white/50"
-                    }`}
+                  className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                    activeIndex === i ? 'w-8 bg-[#4e46e5]' : 'w-4 bg-white/50'
+                  }`}
                   onClick={() => setActiveIndex(i)}
                 />
               ))}
@@ -127,7 +132,6 @@ function Workshops() {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-
           {showArrowNavigation ? <WorkshopCard /> : <WorkshopCardMobile />}
           {showArrowNavigation ? <WorkshopCard /> : <WorkshopCardMobile />}
           {showArrowNavigation ? <WorkshopCard /> : <WorkshopCardMobile />}
@@ -137,4 +141,4 @@ function Workshops() {
   );
 }
 
-export default Workshops; 
+export default Workshops;

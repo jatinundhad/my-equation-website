@@ -19,9 +19,14 @@ function Sponsors() {
 
   return (
     <div>
-      <motion.h1 whileInView={{ opacity: 1, y: 0 }}
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: -100, opacity: 0 }}
-        transition={{ duration: 0.5 }}  className={`${styles["heading"]} font-headingFont`}>Industry & College Partners</motion.h1>
+        transition={{ duration: 0.5 }}
+        className={`${styles['heading']} font-headingFont`}
+      >
+        Industry & College Partners
+      </motion.h1>
       <Marquee speed={40} loop={0}>
         {sponsors.map((sponsor, index) => (
           <div className={styles['sponsor-box']} key={index}>

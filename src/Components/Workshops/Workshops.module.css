@@ -1,15 +1,15 @@
-.carousel-wrapper{
+.carousel-wrapper {
   background-color: bisque;
   height: 90vh;
-  margin:auto;
+  margin: auto;
 }
 
-.carousel{
+.carousel {
   max-width: 85%;
   margin: auto;
 }
 
-.card{
+.card {
   max-width: 60rem;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .heading::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 42.5%;
@@ -37,7 +37,9 @@
   height: 0.1em;
   background-color: black;
   opacity: 0;
-  transition: opacity 300ms, transform 300ms;
+  transition:
+    opacity 300ms,
+    transform 300ms;
 }
 
 .heading:hover::after,
@@ -56,4 +58,3 @@
 .heading:focus::after {
   transform: scale(1);
 }
-

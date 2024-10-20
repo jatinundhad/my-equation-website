@@ -22,11 +22,11 @@ function App() {
       {/* jainish */}
       <Sponsors />
 
-      <section className='section-style'>
-      <Courses />
+      <section className="section-style">
+        <Courses />
 
-      {/* krishil */}
-      <Workshops />
+        {/* krishil */}
+        <Workshops />
       </section>
 
       {/* smit */}

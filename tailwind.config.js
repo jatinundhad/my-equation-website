@@ -35,10 +35,9 @@ export default withMT({
       },
       fontFamily: {
         headingFont: ['"Montserrat"', ...defaultTheme.fontFamily.sans],
-        subHeadingFont:['"Poppins"', ...defaultTheme.fontFamily.sans],
-        bodyFont:['"Roboto"', ...defaultTheme.fontFamily.sans],
-        infoFont:['"Open Sans"', ...defaultTheme.fontFamily.sans]
-
+        subHeadingFont: ['"Poppins"', ...defaultTheme.fontFamily.sans],
+        bodyFont: ['"Roboto"', ...defaultTheme.fontFamily.sans],
+        infoFont: ['"Open Sans"', ...defaultTheme.fontFamily.sans]
       }
     },
     screens: {
