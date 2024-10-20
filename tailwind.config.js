@@ -20,7 +20,7 @@ export default withMT({
         },
         secondary: {
           light: '#ffd966', // lighter yellow for dark mode
-          default: '#FFC632', // main yellow
+          default: 'rgba(237, 214, 110, 0.2)', // main yellow
           dark: '#b38924' // darker yellow for light mode
         },
         neutral: {

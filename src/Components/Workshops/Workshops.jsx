@@ -52,7 +52,7 @@ function Workshops() {
   };
 
   return (
-    <section className={`my-12 ${styles["section-style"]}`}>
+    <section className={`my-12`}>
       <motion.h1 whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 0.5 }} className={`${styles["heading"]} font-headingFont`}>Upcoming Workshops</motion.h1>

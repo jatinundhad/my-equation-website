@@ -57,11 +57,3 @@
   transform: scale(1);
 }
 
-.section-style{
-  height:fit-content;
-  background-image: url("/public/images/yellow-bg.svg"); 
-   background-repeat: no-repeat;
-   background-size:100% 100%;
-   width:100%;
-   padding: 2rem;
-}

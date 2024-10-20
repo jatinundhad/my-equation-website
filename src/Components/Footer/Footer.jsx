@@ -17,7 +17,7 @@ const currentYear = new Date().getFullYear();
 
 function Footer() {
   return (
-    <footer className="relative w-full mt-8 mb-0 px-4 pb-0 bg-secondary-default text-gray-900">
+    <footer className="relative w-full mt-8 mb-0 px-4 py-10 pb-0 bg-secondary-default text-gray-900">
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: 100, opacity: 0 }}
@@ -31,10 +31,10 @@ function Footer() {
           </div>
           <div className="grid grid-cols-2 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
-              <ul key={title}>
+              <ul key={title} className='text-primary-default'>
                 <Typography
                   variant="lead"
-                  color="blue-gray"
+                  // color="blue-gray"
                   className="mb-3 font-medium opacity-40"
                 >
                   {title}
