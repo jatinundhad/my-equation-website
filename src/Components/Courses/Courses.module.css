@@ -21,7 +21,7 @@
   left: 42.5%;
   width: 15%;
   height: 0.1em;
-  background-color: black;
+  background-color: var(--color-primary-default); /* Primary color */
   opacity: 0;
   transition:
     opacity 300ms,
@@ -54,8 +54,8 @@
 .course-container {
   max-width: 550px;
   padding: 24px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: var(--color-neutral-light); /* Light grey for light mode */
+  border: 1px solid var(--color-neutral-default); /* Grey for light mode */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 15px;
@@ -71,7 +71,7 @@
     z-index: -1;
     top: -16px;
     right: -16px;
-    background: #4e46e5dc;
+    background: var(--color-primary-default); /* Main primary color */
     height: 32px;
     width: 32px;
     border-radius: 32px;
@@ -88,11 +88,11 @@
 .course-container:hover {
   p {
     transition: all 0.4s ease-out;
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-font-light); /* White for dark backgrounds */
   }
   h5 {
     transition: all 0.4s ease-out;
-    color: #ffffff;
+    color: var(--color-font-light); /* White for dark backgrounds */
   }
   img {
     transition: all 0.4s ease-out;
@@ -105,13 +105,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
   width: 35px;
   height: 35px;
   overflow: hidden;
   top: 0;
   right: 0;
-  background-color: #4e46e5dc;
+  background-color: var(--color-primary-default); /* Primary color */
   border-radius: 0 4px 0 32px;
 }
 .go-arrow {
@@ -132,34 +131,35 @@
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 8px;
-  color: #333;
+  color: var(--color-font-default); /* Default font color */
 }
 
 .course-description {
   font-size: 16px;
-  color: #666;
+  color: var(--color-neutral-dark); /* Dark grey for descriptions */
   margin-bottom: 12px;
 }
 
 /* Dark mode styles */
 .course-container.dark {
-  background-color: #333;
-  border-color: #555;
+  background-color: var(--color-neutral-dark); /* Dark grey for dark mode */
+  border-color: var(--color-neutral-light); /* Light grey for dark mode */
 }
 
 .course-container.dark .course-icon {
-  color: #fff;
+  color: var(--color-font-light); /* White for dark mode */
 }
 
 .course-container.dark .course-title {
-  color: #fff;
+  color: var(--color-font-light); /* White for dark mode */
 }
 
 .course-container.dark .course-description {
-  color: #ccc;
+  color: var(--color-neutral-light); /* Light grey for dark mode */
 }
+
 .view-all-btn {
-  background-color: #4e46e5dc;
+  background-color: var(--color-primary-default); /* Primary color */
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
@@ -170,19 +170,22 @@
   position: relative;
   margin: 0.5rem auto;
 }
+
 .view-all-btn a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--color-font-light); /* White for links */
 }
+
 .view-all-btn:hover {
-  background-color: #4e46e5;
+  background-color: var(--color-primary-dark); /* Darker shade for hover */
 }
+
 @media only screen and (max-width: 1300px) {
   .course-container {
     max-width: 430px;
-    /* margin-right: 10px; */
   }
 }
+
 @media only screen and (max-width: 768px) {
   .courses-container {
     display: flex;
