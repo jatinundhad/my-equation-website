@@ -10,7 +10,13 @@ function Scroll() {
     borderRadius: '50%',
     boxShadow: 'rgba(0, 0, 0, 0.24) 0px 5px 8px'
   };
-  return <ScrollToTop smooth component={<img src='images/arrow.svg' style={{width:'30px'}}/>} style={styles} />;
+  return (
+    <ScrollToTop
+      smooth
+      component={<img src="images/arrow.svg" style={{ width: '30px' }} />}
+      style={styles}
+    />
+  );
 }
 
 export default Scroll;

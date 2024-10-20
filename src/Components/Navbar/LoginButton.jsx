@@ -8,7 +8,8 @@ export const LoginButton = () => {
       <Button
         variant="contained"
         className="bg-gradient-to-r from-indigo-500 to-[#ab47bc]"
-        sx={{ textTransform: 'none', fontWeight: 'bolder', paddingX: '20px' }}>
+        sx={{ textTransform: 'none', fontWeight: 'bolder', paddingX: '20px' }}
+      >
         Sign In
         <i className="ml-2 fa-solid fa-arrow-right-to-bracket"></i>
       </Button>

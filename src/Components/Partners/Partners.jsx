@@ -4,16 +4,16 @@ import styles from './Partners.module.css';
 
 function Sponsors() {
   const sponsors = [
-    { name: 'Sponsor 1', logo:'images/iitb.png'  },
-    { name: 'Sponsor 2', logo:'images/bits.svg' },
-    { name: 'Sponsor 3', logo:'images/iitr.png'  },
-    { name: 'Sponsor 4', logo:'images/iitk.png'  },
-    { name: 'Sponsor 5', logo:'images/du.png'  },
-    { name: 'Sponsor 6', logo:'images/iitb.png'  },
-    { name: 'Sponsor 7', logo:'images/bits.svg'  },
-    { name: 'Sponsor 8', logo:'images/iitr.png'  },
-    { name: 'Sponsor 9', logo:'images/iitk.png'  },
-    { name: 'Sponsor 10',logo:'images/du.png'  }
+    { name: 'Sponsor 1', logo: 'images/iitb.png' },
+    { name: 'Sponsor 2', logo: 'images/bits.svg' },
+    { name: 'Sponsor 3', logo: 'images/iitr.png' },
+    { name: 'Sponsor 4', logo: 'images/iitk.png' },
+    { name: 'Sponsor 5', logo: 'images/du.png' },
+    { name: 'Sponsor 6', logo: 'images/iitb.png' },
+    { name: 'Sponsor 7', logo: 'images/bits.svg' },
+    { name: 'Sponsor 8', logo: 'images/iitr.png' },
+    { name: 'Sponsor 9', logo: 'images/iitk.png' },
+    { name: 'Sponsor 10', logo: 'images/du.png' }
   ];
 
   return (
