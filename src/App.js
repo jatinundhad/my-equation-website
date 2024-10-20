@@ -8,6 +8,7 @@ import Footer from './Components/Footer/Footer';
 import Hero from './Components/Hero/Hero';
 import Testimonial from './Components/Testimonial/Testimonial';
 import testimonials from './Components/Testimonial/testimonialsData';
+import Scroll from './Components/ScrollToTop/Scroll';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Testimonial cards={testimonials} height="500px" width="70%" offset={2} showArrows={false} />
 
       <Footer />
+      <Scroll />
     </div>
   );
 }

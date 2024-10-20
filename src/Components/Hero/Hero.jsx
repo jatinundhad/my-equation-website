@@ -1,14 +1,14 @@
 import React from 'react';
 import TypingEffect from './TypingEffect';
-import { Login } from '../Navbar/Login';
 import Waves from './Waves';
+import EnrollNowButton from './EnrollNowButton';
 
 const Hero = () => {
   return (
-    <>
-      <div className="hero text-3xl mx-32 h-screen max-h-[708px] flex justify-between px-16">
-        <section className="mt-20 text-[1.7em] font-semibold leading-[70px]">
-          <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+    <div>
+      <div className="hero text-3xl mx-9 md:mx-32 flex justify-between flex-wrap lg:flex-nowrap h-fit lg:h-screen lg:max-h-[750px]">
+        <section className="mt-20 font-semibold leading-[70px] w-full lg:w-[55%]">
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-[1.4em] md:text-[1.7em]">
             <span className="whitespace-nowrap mr-4">Find Your Own</span>
             <span className="whitespace-nowrap">
               <img
@@ -24,7 +24,7 @@ const Hero = () => {
             </span>
           </p>
 
-          <p className="mt-8 text-[30px]">
+          <p className="mt-8 text-[30px] leading-[40px]">
             <span className="mr-2">Boost your career with our courses</span>
             <img src="images/rocket.gif" className="inline-block h-[75px]" alt="rocket" />
           </p>
@@ -38,11 +38,11 @@ const Hero = () => {
             </p>
           </div>
 
-          <Login></Login>
+          <EnrollNowButton />
         </section>
-        <section className="hero-img h-full max-h-[450px] mt-8">
+        <section className="hero-img w-4/5 lg:w-[45%] mx-auto mt-[50px] h-fit">
           <dotlottie-player
-            src="https://lottie.host/baf696a9-3865-4e2c-9171-1edb1a8275d8/4OKDqqsSkb.json"
+            src="https://lottie.host/7a86c80e-8f2b-419c-948f-f0c4d43c4776/xXUZTECrHj.json"
             background="transparent"
             speed="1"
             loop
@@ -51,7 +51,7 @@ const Hero = () => {
         </section>
       </div>
       <Waves />
-    </>
+    </div>
   );
 };
 
