@@ -17,7 +17,7 @@ const currentYear = new Date().getFullYear();
 
 function Footer() {
   return (
-    <footer className="relative w-full mb-0 px-4 py-10 pb-0 bg-[#fff5cd] text-gray-900">
+    <footer className="relative w-full mb-0 px-4 py-10 pb-0 bg-secondary-default text-gray-900">
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: 100, opacity: 0 }}
