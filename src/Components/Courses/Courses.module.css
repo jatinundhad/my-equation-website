@@ -131,7 +131,7 @@
   font-weight: 500;
   margin-top: 10px;
   margin-bottom: 8px;
-  color: var(--color-font-default); /* Default font color */
+  color: var(--color-primary-default); /* Default font color */
 }
 
 .course-description {

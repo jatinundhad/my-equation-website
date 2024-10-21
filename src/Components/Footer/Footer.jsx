@@ -17,7 +17,7 @@ const currentYear = new Date().getFullYear();
 
 function Footer() {
   return (
-    <footer className="relative w-full mb-0 px-4 py-10 pb-0 bg-secondary-default text-gray-900">
+    <footer className="relative w-full mb-0 px-4 py-10 pb-0 bg-[#fff5cd] text-gray-900">
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: 100, opacity: 0 }}
@@ -34,11 +34,7 @@ function Footer() {
           <div className="grid grid-cols-2 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title} className="text-primary-default">
-                <Typography
-                  variant="lead"
-                  // color="blue-gray"
-                  className="mb-3 font-medium opacity-40"
-                >
+                <Typography variant="lead" className="mb-3 font-medium">
                   {title}
                 </Typography>
                 {items.map((link) => (
@@ -68,14 +64,14 @@ function Footer() {
             </a>
             . All Rights Reserved.
           </Typography>
-          <div className="flex gap-4 text-gray-700 sm:justify-center">
+          <div className="flex gap-4 text-font-default sm:justify-center">
             <motion.Typography
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ x: -100, opacity: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
               as="a"
               href="#"
-              className="opacity-80 transition-opacity hover:opacity-100"
+              className="opacity-70 transition-opacity hover:opacity-100"
             >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />

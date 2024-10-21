@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from 'uuid';
 import debounce from 'lodash.debounce';
 import Card from './Card';
 import { useMediaQuery } from '@mui/material';
+import { motion } from 'framer-motion';
 
 function Testimonial(props) {
   const [isHovered, setIsHovered] = useState(false);
@@ -79,46 +80,47 @@ function Testimonial(props) {
   const height = isMobile ? '35vh' : isTablet ? '30vh' : isDesktop ? '32vh' : '40vh';
 
   return (
-    <section className={`${styles.carouselContainer} my-[50px]`} aria-label="Testimonial Carousel">
-      <div style={{ width, height }}>
-        <Carousel
-          slides={cards.map((card, index) => ({
-            key: uuidv4(),
-            ...card,
-            onClick: () => handleCardDotClick(index),
-            content: (
-              <Card data={card} onHoverChange={(isHovered) => handleCardHoverChange(isHovered)} />
-            )
-          }))}
-          goToSlide={goToSlide}
-          offsetRadius={offsetRadius}
-          animationConfig={config.gentle}
-        />
-      </div>
-      <div className={styles.dotsContainer} style={{ paddingTop: '5em' }}>
-        {cards.map((card) => (
-          <button
-            key={card.name}
-            onClick={() => handleCardDotClick(cards.indexOf(card))}
-            style={{
-              cursor: 'pointer',
-              height: '10px',
-              width: '10px',
-              margin: '0 5px',
-              backgroundColor:
-                currentSlide === cards.indexOf(card)
-                  ? 'var(--color-secondary-default)'
-                  : 'var(--color-neutral-dark)',
-              borderRadius: '50%',
-              display: 'inline-block',
-              border: 'none',
-              outline: 'none',
-              padding: 0
-            }}
-            aria-label={`Slide ${cards.indexOf(card) + 1}`}
+    <section>
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ y: -100, opacity: 0 }}
+        transition={{ duration: 0.5 }}
+        className="heading font-headingFont text-font-default"
+      >
+        Voices of Satisfaction
+      </motion.h1>
+      <section className={styles.carouselContainer} aria-label="Testimonial Carousel">
+        <div style={{ width, height }}>
+          <Carousel
+            slides={cards.map((card, index) => ({
+              key: uuidv4(),
+              ...card,
+              onClick: () => handleCardDotClick(index),
+              content: (
+                <Card data={card} onHoverChange={(isHovered) => handleCardHoverChange(isHovered)} />
+              )
+            }))}
+            goToSlide={goToSlide}
+            offsetRadius={offsetRadius}
+            animationConfig={config.gentle}
           />
-        ))}
-      </div>
+        </div>
+        <div className={styles.dotsContainer} style={{ paddingTop: '5em' }}>
+          {cards.map((card) => (
+            <button
+              key={card.name}
+              onClick={() => handleCardDotClick(cards.indexOf(card))}
+              style={{
+                backgroundColor:
+                  currentSlide === cards.indexOf(card)
+                    ? 'var(--color-secondary-dark)'
+                    : 'var(--color-neutral-dark)'
+              }}
+              aria-label={`Slide ${cards.indexOf(card) + 1}`}
+            />
+          ))}
+        </div>
+      </section>
     </section>
   );
 }

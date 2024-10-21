@@ -42,7 +42,7 @@
 .avatar {
   position: absolute;
   top: -50px;
-  border: 6px solid var(--color-secondary-default);
+  border: 6px solid var(--color-secondary-dark);
   border-radius: 50%;
   height: 100px;
   box-shadow: 6px 6px 17px rgba(37, 34, 34, 0.36);

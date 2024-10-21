@@ -32,7 +32,7 @@ function App() {
         {/* krishil */}
         <Workshops />
       </section>
-      
+
       {/* smit */}
       <Testimonial cards={testimonials} height="500px" width="70%" offset={2} showArrows={false} />
 

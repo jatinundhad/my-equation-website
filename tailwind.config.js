@@ -20,8 +20,8 @@ export default withMT({
         },
         secondary: {
           light: '#ffd966', // lighter yellow for dark mode
-          default: 'rgba(237, 214, 110, 0.5)', // main yellow
-          dark: '#b38924' // darker yellow for light mode
+          default: '#edd66e33', // main yellow
+          dark: '#ffc632' // darker yellow for light mode
         },
         neutral: {
           light: '#f3f4f6', // light grey for dark mode backgrounds
@@ -30,7 +30,7 @@ export default withMT({
         },
         font: {
           light: '#ffffff', // white font for dark backgrounds (dark mode)
-          default: '#e6eeff'
+          default: '#1f1f1f'
         }
       },
       fontFamily: {

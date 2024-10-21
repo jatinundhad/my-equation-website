@@ -128,7 +128,7 @@ function Workshops() {
             </div>
           )}
           autoplay={!paused}
-          interval={3000}
+          interval={4000}
           loop={true}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
