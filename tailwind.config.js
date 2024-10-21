@@ -1,6 +1,6 @@
 import withMT from '@material-tailwind/react/utils/withMT';
 import plugin from 'tailwindcss/plugin';
-const defaultTheme = require('tailwindcss/defaultTheme');
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
 export default withMT({

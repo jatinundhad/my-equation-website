@@ -1,3 +1,4 @@
+import React from 'react';
 import { Carousel, IconButton } from '@material-tailwind/react';
 import WorkshopCard from './WorkshopCard';
 import { useEffect, useState } from 'react';
