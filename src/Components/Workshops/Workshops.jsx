@@ -1,3 +1,4 @@
+import React from 'react';
 import { Carousel, IconButton } from '@material-tailwind/react';
 import WorkshopCard from './WorkshopCard';
 import { useEffect, useState } from 'react';
@@ -47,7 +48,7 @@ function Workshops() {
   };
 
   return (
-    <section className={`my-12`}>
+    <section className={`my-[50px]`}>
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: -100, opacity: 0 }}
@@ -127,7 +128,7 @@ function Workshops() {
             </div>
           )}
           autoplay={!paused}
-          interval={3000}
+          interval={4000}
           loop={true}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}

@@ -18,12 +18,12 @@ function Sponsors() {
   ];
 
   return (
-    <div>
+    <div className="my-[50px]">
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: -100, opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className={`${styles['heading']} font-headingFont`}
+        className="heading font-headingFont"
       >
         Industry & College Partners
       </motion.h1>

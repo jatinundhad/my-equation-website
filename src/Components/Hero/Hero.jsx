@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <div>
-      <div className="hero text-3xl mx-9 md:mx-32 flex justify-between flex-wrap lg:flex-nowrap h-fit lg:h-screen lg:max-h-[750px]">
+      <div className="hero text-3xl mx-9 md:mx-32 flex justify-between flex-wrap lg:flex-nowrap h-fit lg:h-screen lg:max-h-[750px] mb-[70px]">
         <motion.section
           initial={{ x: -100, opacity: 0 }}
           animate={{ opacity: 1, x: 0 }}
@@ -70,7 +70,7 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0.2 }}
           initial={{ x: 100, opacity: 0 }}
           transition={{ duration: 0.5, delay: 0.7 }}
-          className="hero-img w-4/5 lg:w-[45%] mx-auto mt-[50px] h-fit"
+          className="hero-img w-4/5 lg:w-[45%] m-auto h-fit hidden lg:block"
         >
           <dotlottie-player
             src="https://lottie.host/7a86c80e-8f2b-419c-948f-f0c4d43c4776/xXUZTECrHj.json"

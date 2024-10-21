@@ -24,7 +24,7 @@ const coursesData = [
 
 function Courses() {
   return (
-    <section id="course-section" className="my-12">
+    <section id="course-section" className="my-[50px]">
       <div className="courses-container-wrapper">
         <motion.h1
           whileInView={{ opacity: 1, y: 0 }}

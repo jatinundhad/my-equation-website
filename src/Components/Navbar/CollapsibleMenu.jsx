@@ -17,20 +17,20 @@ export const CollapsibleMenu = ({ isOpen }) => {
           <ul className="py-1 w-full grid grid-cols-1">
             <li className="ml-9 py-2 font-medium">
               <i className="fa-solid fa-arrow-right mr-3"></i>
-              <a href="/#home" className="text-black font-bold">
+              <a href="/#home" className="text-black font-bold hover:text-primary-default">
                 Home
               </a>
             </li>
             <li className="ml-9 py-2 font-medium">
               <i className="fa-solid fa-arrow-right mr-3"></i>
-              <a href="/#about" className="text-black font-bold">
-                About
+              <a href="/#courses" className="text-black font-bold hover:text-primary-default">
+                Courses
               </a>
             </li>
             <li className="ml-9 py-2 font-medium">
               <i className="fa-solid fa-arrow-right mr-3"></i>
-              <a href="/#contact" className="text-black font-bold">
-                Contact
+              <a href="/#aboutus" className="text-black font-bold hover:text-primary-default">
+                About Us
               </a>
             </li>
           </ul>
