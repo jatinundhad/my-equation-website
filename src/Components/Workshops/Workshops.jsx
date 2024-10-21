@@ -48,7 +48,7 @@ function Workshops() {
   };
 
   return (
-    <section className={`my-12`}>
+    <section className={`my-[50px]`}>
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ y: -100, opacity: 0 }}

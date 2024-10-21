@@ -23,7 +23,7 @@
 .button::after {
   content: '';
   position: absolute;
-  inset: -0.3rem;
+  inset: -0.1rem;
   z-index: -1;
   background: conic-gradient(
     from var(--gradient-angle),
@@ -34,11 +34,11 @@
     var(--clr-4)
   );
   border-radius: inherit;
-  animation: rotation 3s linear infinite;
+  animation: rotation 5s linear infinite;
 }
 
 .button::after {
-  filter: blur(3.5rem);
+  filter: blur(0.5rem);
 }
 
 @keyframes rotation {

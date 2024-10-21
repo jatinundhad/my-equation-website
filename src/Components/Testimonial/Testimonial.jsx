@@ -79,7 +79,7 @@ function Testimonial(props) {
   const height = isMobile ? '35vh' : isTablet ? '30vh' : isDesktop ? '32vh' : '40vh';
 
   return (
-    <section className={styles.carouselContainer} aria-label="Testimonial Carousel">
+    <section className={`${styles.carouselContainer} my-[50px]`} aria-label="Testimonial Carousel">
       <div style={{ width, height }}>
         <Carousel
           slides={cards.map((card, index) => ({

@@ -2,7 +2,7 @@ import React from 'react';
 import './Query.css';
 function Query() {
   return (
-    <div className="limiter">
+    <div className="limiter my-[50px]">
       <div className="container-login100">
         <div className="wrap-login100">
           <div className="login100-pic js-tilt" data-tilt>

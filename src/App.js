@@ -32,11 +32,17 @@ function App() {
         {/* krishil */}
         <Workshops />
       </section>
-      <Query />
+      
       {/* smit */}
       <Testimonial cards={testimonials} height="500px" width="70%" offset={2} showArrows={false} />
 
+      {/* jainish */}
+      <Query />
+
+      {/* krishil */}
       <Footer />
+
+      {/* jainish */}
       <Scroll />
     </div>
   );

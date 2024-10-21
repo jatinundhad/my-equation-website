@@ -24,13 +24,13 @@ export const CollapsibleMenu = ({ isOpen }) => {
             <li className="ml-9 py-2 font-medium">
               <i className="fa-solid fa-arrow-right mr-3"></i>
               <a href="/#about" className="text-black font-bold">
-                About
+                Courses
               </a>
             </li>
             <li className="ml-9 py-2 font-medium">
               <i className="fa-solid fa-arrow-right mr-3"></i>
               <a href="/#contact" className="text-black font-bold">
-                Contact
+                About Us
               </a>
             </li>
           </ul>
