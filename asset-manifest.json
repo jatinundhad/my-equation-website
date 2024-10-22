@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/my-equation-website/static/css/main.83f1dda6.css",
+    "main.js": "/my-equation-website/static/js/main.9306fa09.js",
+    "index.html": "/my-equation-website/index.html",
+    "static/media/quote-right.svg": "/my-equation-website/static/media/quote-right.732c0363d6d108c8c852ac20a986c78e.svg",
+    "static/media/quote-left.svg": "/my-equation-website/static/media/quote-left.0b65a7ff485c1ab487c6be26061a88ae.svg",
+    "static/media/yellow-bg.svg": "/my-equation-website/static/media/yellow-bg.6a4f502ce19b6b926edc.svg",
+    "main.83f1dda6.css.map": "/my-equation-website/static/css/main.83f1dda6.css.map",
+    "main.9306fa09.js.map": "/my-equation-website/static/js/main.9306fa09.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83f1dda6.css",
+    "static/js/main.9306fa09.js"
+  ]
+}
