@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/my-equation-website/static/css/main.37bc3a85.css",
+    "main.js": "/my-equation-website/static/js/main.1135939d.js",
+    "index.html": "/my-equation-website/index.html",
+    "static/media/quote-right.svg": "/my-equation-website/static/media/quote-right.a7a6777c2c7cf512beffabaa02e144bf.svg",
+    "static/media/quote-left.svg": "/my-equation-website/static/media/quote-left.d34aa0fbf7f43abd92002613305e513d.svg",
+    "main.37bc3a85.css.map": "/my-equation-website/static/css/main.37bc3a85.css.map",
+    "main.1135939d.js.map": "/my-equation-website/static/js/main.1135939d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37bc3a85.css",
+    "static/js/main.1135939d.js"
+  ]
+}
